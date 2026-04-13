@@ -4,7 +4,7 @@ const products = [
     name: "Laptop",
     price: 1200,
     description: "Powerful laptop",
-    image: "/images/laptop.jpeg",
+    image: process.env.PUBLIC_URL + "/images/laptop.jpeg",
     inStock: true
   },
   {
@@ -12,7 +12,7 @@ const products = [
     name: "Phone",
     price: 800,
     description: "Smart phone",
-    image: "/images/phone.jpeg",
+    image: process.env.PUBLIC_URL + "/images/phone.jpeg",
     inStock: false
   },
   {
@@ -20,7 +20,7 @@ const products = [
     name: "Headphones",
     price: 150,
     description: "Wireless headphones",
-    image: "/images/headphones.jpeg",
+    image: process.env.PUBLIC_URL + "/images/headphones.jpeg",
     inStock: true
   }
 ];
