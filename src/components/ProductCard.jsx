@@ -7,11 +7,11 @@ const ProductCard = ({ product }) => {
   };
 
   const handleShowDetails = () => {
-    alert(product.name);
+    alert(product?.name);
   };
 
   const cardStyle = {
-    backgroundColor: product.inStock ? '#fff' : '#e9ecef'
+    backgroundColor: product?.inStock ? '#fff' : '#e9ecef'
   };
 
   return (
@@ -19,26 +19,28 @@ const ProductCard = ({ product }) => {
       <Card className="h-100 shadow-sm" style={cardStyle}>
         <Card.Img 
           variant="top" 
-          src={product.image} 
+          src={product?.image} 
           style={{ height: '180px', objectFit: 'contain', marginTop: '10px' }} 
         />
         <Card.Body className="text-center">
-          <Card.Title className="text-primary fw-bold text-start">{product.name}</Card.Title>
-          <Card.Text className="fs-4 fw-bold text-start">${product.price}</Card.Text>
+          <Card.Title className="text-primary fw-bold text-start">{product?.name}</Card.Title>
+          <Card.Text className="fs-4 fw-bold text-start">${product?.price}</Card.Text>
           
-          {!product.inStock && (
-            <div className="text-danger fw-bold mb-2 text-start">Out of Stock</div>
+          {!product?.inStock && (
+            <Button variant="secondary" className="w-100 mb-2" disabled>
+              Out of Stock
+            </Button>
           )}
 
           <Card.Text className="text-muted text-start">
-            {product.description}
+            {product?.description}
           </Card.Text>
 
           <div className="d-grid gap-2">
             <Button 
               variant="success" 
               onClick={handleAddToCart}
-              disabled={!product.inStock}
+              disabled={!product?.inStock}
             >
               Add to Cart
             </Button>

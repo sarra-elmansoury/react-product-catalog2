@@ -26,9 +26,7 @@ function App() {
             {hideOutOfStock ? "Show All Products" : "Hide Out of Stock"}
           </Button>
           <hr />
-          <div id="products-section">
-            <ProductList products={displayedProducts} />
-          </div>
+          <ProductList products={displayedProducts} />
         </Container>
       </main>
       <Footer />
